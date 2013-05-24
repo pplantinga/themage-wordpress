@@ -4,7 +4,7 @@
  * Sets up the content width value based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) 
-  $content_width = 320;
+  $content_width = 1000;
 
 /**
  * Make Theme Check happy
@@ -41,34 +41,18 @@ function themage_widgets_init() {
 add_action( 'widgets_init', 'themage_widgets_init' );
 
 /**
- * Remove link to #print which is a non-existent id
- */
-function themage_print_fix( $content )
-{
-  $new_content = str_replace(
-    '#print"',
-    '#"',
-    $content
-  );  
-
-  return $new_content;
-}
-add_filter( 'the_content', 'themage_print_fix', 100 );
-
-/**
  * Enqueue scripts 
  */
 function themage_enqueue()
 {
+	// Load main stylesheet
+	wp_enqueue_style( 'themage-style', get_stylesheet_uri() );
+
   if ( is_singular() && comments_open() ) 
 		wp_enqueue_script( 'comment-reply' );
 
-	// Load fonts
-	$open_sans = array( 'family' => 'Open+Sans:400italic,700italic,400,700' );
-	$google = '//fonts.googleapis.com/css';
-
-	wp_enqueue_style( 'open-sans', add_query_arg( $open_sans, $google ) );		
-	wp_enqueue_style( 'myriad-pro', get_template_directory_uri() . '/myriad-pro-condensed.css' );		
+	// Load font. To remove, add `wp_dequeue_style( 'Lobster' );`
+	wp_enqueue_style( 'Lobster', add_query_arg( 'family', 'Lobster', '//fonts.googleapis.com/css' ) );
 }
 add_action( 'wp_enqueue_scripts', 'themage_enqueue' );
 
