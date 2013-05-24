@@ -45,10 +45,10 @@ html {
 	font-size: 14px;
 }
 body {
-	font-family: 'Open Sans', sans-serif;
-	color: #333;
-	margin: 0;
+	font-family: sans-serif;
+	color: #CCC;
 	line-height: 1.5;
+	background: #777;
 }
 
 /* Treat html5 stuffs correctly */
@@ -77,32 +77,32 @@ blockquote {
 	margin-left: 1rem;
 	padding-left: 14px;
 	padding-left: 1rem;
-	border-left: 4px solid #393;
+	border-left: 4px solid #8C8;
 	font-style: italic;
 }
 
 /* Links */
 a {
-	color: #27B;
+	color: #89F;
 	text-decoration: none;
-	border-bottom: 1px solid #CCC;
+	border-bottom: 1px solid #777;
 	-webkit-transition: all 0.2s;
 	-moz-transition: all 0.2s;
 	transition: all 0.2s;
 }
 a:visited {
-	color: #76A;
+	color: #C8F;
 }
 a:hover {
-	color: #D23;
-	border-bottom: 1px solid #D23;
+	color: #F55;
+	border-bottom: 1px solid #F55;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 0;
 	font-weight: normal;
-	text-shadow: 1px 1px 0 #CCC;
+	font-family: Lobster, serif;
 } 
 h1 { font-size: 200% }
 h2 { font-size: 180% }
@@ -234,23 +234,22 @@ img, .wp-caption {
 	float: left;
 }
 .site-name {
-	color: #333;
+	color: #CCC;
 	margin: 0;
 	font-size: 28px;
 	font-size: 2rem;
 	font-weight: normal;
 	display: block;
-	text-shadow: 1px 1px 0 #CCC;
+	font-family: Lobster, serif;
 }
 .site-description {
-	color: #777;
+	color: #999;
 	margin: 0 0 14px;
 	margin: 0 0 1rem;
 	font-size: 16px;
 	font-size: 1.14rem;
 	font-style: italic;
 	font-weight: normal;
-	text-shadow: 1px 1px 0 #CCC;
 }
 
 /* Menu */
