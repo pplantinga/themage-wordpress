@@ -18,13 +18,7 @@
 				</div>
 
 				<div id="header-container">
-					<div class="header-search">
-						<form method="get" id="searchform" action="/">
-							<label for="s" class="search-label">Search:</label> 
-							<input type="text" class="field" name="s" id="s" />
-							<input type="submit" class="submit" name="submit" id="searchsubmit" value="Go" />
-						</form>
-					</div>
+					<?php get_sidebar( 'header-region' ); ?>
 
 					<a id="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 						<?php $header_image = get_header_image();

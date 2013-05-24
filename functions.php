@@ -29,14 +29,36 @@ add_action( 'after_setup_theme', 'themage_setup' );
  */
 function themage_widgets_init() {
   register_sidebar( array(
-    'name' => 'Main Sidebar',
-    'id' => 'sidebar-1',
-    'description' => 'Appears on posts and pages',
+    'name' => 'Left Sidebar',
+    'id' => 'left-sidebar',
+    'description' => 'Appears on the left side of posts and pages',
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => '</aside>',
-    'before_title' => '<h2 class="widget-title">',
-    'after_title' => '</h2>',
-  ) );
+	) );
+
+	register_sidebar( array(
+		'name' => 'Right Sidebar',
+		'id' => 'right-sidebar',
+		'description' => 'Appears on the right side of posts and pages',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widet' => '</aside>',
+	) );
+
+	register_sidebar( array(
+		'name' => 'Header Region',
+		'id' => 'header-region',
+		'description' => 'Appears in the header',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widet' => '</aside>',
+	) );
+
+	register_sidebar( array(
+		'name' => 'Footer Region',
+		'id' => 'footer-region',
+		'description' => 'Appears in the footer',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widet' => '</aside>',
+	) );
 }
 add_action( 'widgets_init', 'themage_widgets_init' );
 
@@ -55,4 +77,20 @@ function themage_enqueue()
 	wp_enqueue_style( 'Lobster', add_query_arg( 'family', 'Lobster', '//fonts.googleapis.com/css' ) );
 }
 add_action( 'wp_enqueue_scripts', 'themage_enqueue' );
+
+/**
+ * Add body classes
+ */
+function themage_body_class( $classes )
+{
+	if ( is_active_sidebar( 'left-sidebar' ) && is_active_sidebar( 'right-sidebar' ) )
+		$classes[] = 'two-sidebars';
+	else if ( is_active_sidebar( 'left-sidebar' ) || is_active_sidebar( 'right-sidebar' ) )
+		$classes[] = 'one-sidebar';
+	else
+		$classes[] = 'no-sidebars';
+
+	return $classes;
+}
+add_filter( 'body_class', 'themage_body_class' );
 

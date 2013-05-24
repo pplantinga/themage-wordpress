@@ -165,7 +165,6 @@ article {
 	padding-bottom: 1rem;
 	margin-bottom: 14px;
 	margin-bottom: 1rem;
-	border-bottom: 1px solid #CCC;
 }
 article footer {
 	clear: both;
@@ -220,9 +219,6 @@ img, .wp-caption {
 	height: inherit !important;
 	width: inherit !important;
 	overflow: inherit !important;
-}
-.header-search {
-	float: right;
 }
 #home-link {
 	border: none;
@@ -283,16 +279,8 @@ img, .wp-caption {
 	overflow: hidden;
 }
 
-
-/* Sidebar */
-#sidebar {
-	float: right;
-	width: 25%;
-	padding-left: 21px;
-	padding-left: 1.5rem;
-	border-left: 1px solid #CCC;
-}
-.widget-title {
+/* Sidebars */
+.widgettitle {
 	clear: both;
 	margin-top: 14px;
 	margin-top: 1rem;
@@ -300,10 +288,32 @@ img, .wp-caption {
 .widget {
 	padding-bottom: 14px;
 	padding-bottom: 1rem;
-	border-bottom: 3px double #CCC;
+}
+.header-region {
+	width: 30%;
+	float: right;
+}
+.footer-region {
+	border-top: 1px solid #777;
+}
+.sidebar {
+	width: 30%;
+}
+.two-sidebars .sidebar {
+	width: 20%;
+}
+.sidebar.left {
+	float: left;
+}
+.sidebar.right {
+	float: right;
 }
 /* Squish main content */
-#page-main {
+.two-sidebars #page-main {
+	float: left;
+	width: 60%;
+}
+.one-sidebar #page-main {
 	float: left;
 	width: 70%;
 }

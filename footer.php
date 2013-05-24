@@ -1,7 +1,5 @@
 	<footer id="page-footer">
-			<div id="credit">
-				<a href="http://massey-plantinga.com">Credit: Peter Massey-Plantinga</a>
-			</div>
+		<?php get_sidebar( 'footer-region' ); ?>
 	</footer>
 </div><!-- #page -->
 <?php wp_footer(); ?>

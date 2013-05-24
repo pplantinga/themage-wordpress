@@ -1,5 +1,8 @@
 <?php get_header(); ?>
+
 <div id="content">
+	<?php get_sidebar( 'left' ); ?>
+
 	<main id="page-main" role="main">
 		<?php if ( is_search() ): ?>
 			<h1>Search Results For &lsquo;<?php the_search_query() ?>&rsquo;:</h1>
@@ -41,7 +44,8 @@
 			</nav>
 		<?php endif; ?>
 	</main>
+	
+	<?php get_sidebar( 'right' ); ?>
 </div><!-- #content -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
