@@ -9,7 +9,7 @@ if ( ! isset( $content_width ) )
 /**
  * Make Theme Check happy
  */
-function dredf_mobile_setup() {
+function themage_setup() {
 	$background_args = array(
 		'default-color' => 'ffffff',
 	);
@@ -21,13 +21,13 @@ function dredf_mobile_setup() {
 	add_theme_support( 'menus' );
 	register_nav_menus( array( 'primary' => 'Primary Menu' ) );
 }
-add_action( 'after_setup_theme', 'dredf_mobile_setup' );
+add_action( 'after_setup_theme', 'themage_setup' );
 
 
 /**
  * Registers our main widget area and the front page widget areas.
  */
-function dredf_mobile_widgets_init() {
+function themage_widgets_init() {
   register_sidebar( array(
     'name' => 'Main Sidebar',
     'id' => 'sidebar-1',
@@ -38,12 +38,12 @@ function dredf_mobile_widgets_init() {
     'after_title' => '</h2>',
   ) );
 }
-add_action( 'widgets_init', 'dredf_mobile_widgets_init' );
+add_action( 'widgets_init', 'themage_widgets_init' );
 
 /**
  * Remove link to #print which is a non-existent id
  */
-function dredf_mobile_print_fix( $content )
+function themage_print_fix( $content )
 {
   $new_content = str_replace(
     '#print"',
@@ -53,12 +53,12 @@ function dredf_mobile_print_fix( $content )
 
   return $new_content;
 }
-add_filter( 'the_content', 'dredf_mobile_print_fix', 100 );
+add_filter( 'the_content', 'themage_print_fix', 100 );
 
 /**
  * Enqueue scripts 
  */
-function dredf_mobile_enqueue()
+function themage_enqueue()
 {
   if ( is_singular() && comments_open() ) 
 		wp_enqueue_script( 'comment-reply' );
@@ -70,22 +70,5 @@ function dredf_mobile_enqueue()
 	wp_enqueue_style( 'open-sans', add_query_arg( $open_sans, $google ) );		
 	wp_enqueue_style( 'myriad-pro', get_template_directory_uri() . '/myriad-pro-condensed.css' );		
 }
-add_action( 'wp_enqueue_scripts', 'dredf_mobile_enqueue' );
-
-/**
- * These fixes work with the inflexible wordpress system
- * to make sure our html validates...
- */
-function dredf_content_fixes( $content )
-{
-  // Fix bug with columns where extra p's are added
-  $content = preg_replace(
-    '/(<p>)?((<\/div>)?<div class="column c\d">)<\/p>/', 
-    '\2',
-    $content
-  );  
-
-  return $content;
-}
-add_filter( 'the_content', 'dredf_content_fixes', 10 );
+add_action( 'wp_enqueue_scripts', 'themage_enqueue' );
 
