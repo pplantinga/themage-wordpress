@@ -173,15 +173,14 @@ article footer {
 	padding: 0.5rem 0;
 }
 
-/* Fluid width up to 1000px */
-#header-container,
-#footer-container,
-#content {
-	padding: 14px 3%;
-	padding: 1rem 3%;
-	overflow: hidden;
-	max-width: 1000px;
-	margin: 0 auto;
+/* Fluid width */
+#page {
+	padding: 5%;
+	margin: 5%;
+	background: #000;
+	background: rgba( 0, 0, 0, 0.7 );
+	box-shadow: 0 0 7px #000;
+	border-radius: 10px;
 }
 
 /* Make sure images don't expand off pages */
@@ -223,8 +222,6 @@ img, .wp-caption {
 	overflow: inherit !important;
 }
 .header-search {
-	padding-top: 28px;
-	padding-top: 2rem;
 	float: right;
 }
 #home-link {
@@ -280,11 +277,12 @@ img, .wp-caption {
 	border-bottom: 4px solid #D23;
 	color: #D23;
 }
-/* Breadcrumb */
-.breadcrumbs {
-	font-size: 12px;
-	font-size: 0.86rem;
+
+/* Content */
+#content {
+	overflow: hidden;
 }
+
 
 /* Sidebar */
 #sidebar {
@@ -305,125 +303,9 @@ img, .wp-caption {
 	border-bottom: 3px double #CCC;
 }
 /* Squish main content */
-#main {
+#page-main {
 	float: left;
 	width: 70%;
 }
 
-/* Home page */
-.home #main,
-.home #sidebar {
-	width: 100%;
-	border: none;
-}
-.home .widget {
-	float: left;
-	width: 47%;
-	margin: 0 3% 0 0;
-}
-
-/* Make room for footer at bottom */
-#content {
-  margin: 0 auto;
-  padding: 0 3% 154px;
-  padding: 0 3% 11rem;
-}
-
-/* Make footer stick to bottom */
-html {
-  height: 100%;
-}
-body {
-  min-height: 100%;
-  position: relative;
-}
-
-/* Pre-Header, Footer */
-#footer-container {
-	padding: 14px 3% 0;
-	padding: 1rem 3% 0;
-}
-#page-footer {
-	background: #292929;
-	color: #FFF;
-  width: 100%;
-  min-width: 100%;
-	font-size: 12px;
-	font-size: 0.86rem;
-	position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 133px;
-  height: 9.5rem;
-  padding: 0;
-  line-height: 1.5;
-}
-#footer-container a {
-	color: #FFF;
-	border-bottom: 1px solid #777;
-}
-#footer-container a:hover {
-	color: #59D;
-	border-bottom: 1px solid #59D;
-}
-
-/* Media queries */
-@media print {
-	#page-header,
-	#page-footer,
-	#sidebar {
-		display: none;
-	}
-	#main {
-		width: 100%;
-	}
-	#content,
-	#main article {
-		padding: 0;
-		margin: 0;
-		border: 0;
-	}
-	.post-title {
-		text-shadow: none;
-	}
-}
-@media screen and (max-width: 816px) {
-	.header-search,
-	#main,
-	#sidebar,
-	.home .widget {
-		float: none;
-		padding: 0;
-		width: 100%;
-		border: none;
-	}
-	#links,
-	#government-affairs {
-		display: none;
-	}
-	#main-office {
-		border: none;
-		padding: 0;
-	}
-}
-@media screen and (max-width: 500px) {
-	#home-link img {
-		float: none;
-		margin: 0 auto;
-		display: block;
-	}
-	#home-link {
-		text-align: center;
-	}
-	.site-description {
-		display: block;
-	}
-	.search-label {
-		display: block;
-	}
-	.header-search {
-		width: 280px;
-		width: 20rem;
-		margin: 0 auto;
-	}
-}
+/* Footer */
