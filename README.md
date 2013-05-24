@@ -1,4 +1,4 @@
-twentytwelve-clone
-==================
+Themage
+=======
 
-A simple, lightweight, responsive, accessible, clone of WordPress' twentytwelve (oh okay I changed a few things)
+A simple, lightweight, responsive, accessible, html5 theme for WordPress
