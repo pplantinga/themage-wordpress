@@ -1,0 +1,430 @@
+/*
+Theme Name: Twentytwelve Clone 
+Description: A simple, lightweight, responsive, accessible clone of WordPress' twentytwelve
+Author: Peter Massey-Plantinga
+Author URI: http://massey-plantinga.com
+Theme URI: http://github.com/pplantinga/twentytwelve-clone
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: flexible-width, white
+*/
+
+/* Wordpress-required styles */
+.wp-caption-text,
+.gallery-caption {
+	font-style: italic;
+	color: #777;
+}
+.sticky {
+	border-top: 4px double #CCC;
+	border-bottom: 4px double #CCC;
+	padding-bottom: 1em;
+}
+.bypostauthor {
+	color: #FFF;
+	background: #27B;
+}
+.alignleft {
+  float: left;
+	margin-right: 14px;
+}
+.alignright {
+  float: right;
+	margin-left: 14px;
+}
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Global styles */
+html {
+	font-size: 14px;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #333;
+	margin: 0;
+	line-height: 1.5;
+}
+
+/* Treat html5 stuffs correctly */
+article, aside, section, footer, main {
+	display: block;
+}
+
+/* Indented stuffs */
+ul, dl, ol {
+	padding-left: 14px;
+	padding-left: 1rem;
+}
+li, dt, dd {
+	margin-bottom: 7px;
+	margin-bottom: 0.5rem;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin-left: 14px;
+	margin-left: 1rem;
+}
+blockquote {
+	margin-left: 14px;
+	margin-left: 1rem;
+	padding-left: 14px;
+	padding-left: 1rem;
+	border-left: 4px solid #393;
+	font-style: italic;
+}
+
+/* Links */
+a {
+	color: #27B;
+	text-decoration: none;
+	border-bottom: 1px solid #CCC;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+}
+a:visited {
+	color: #76A;
+}
+a:hover {
+	color: #D23;
+	border-bottom: 1px solid #D23;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	font-weight: normal;
+	text-shadow: 1px 1px 0 #CCC;
+} 
+h1 { font-size: 200% }
+h2 { font-size: 180% }
+h3 { font-size: 160% }
+h4 { font-size: 140% }
+h5 { font-size: 120% }
+h6 { font-size: 110% }
+
+/* Form Elements */
+input,
+textarea {
+	border: 1px solid #CCC;
+	font-size: 13px;
+	font-size: 0.93rem;
+	border-radius: 3px;
+}
+input[type="image"] {
+	border: none;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+textarea {
+	padding: 7px;
+	padding: 0.5rem;
+	width: 203px;
+	width: 14.5rem;
+}
+input[type="button"],
+input[type="submit"],
+input[type="cancel"] {
+	font-weight: bold;
+	background: #DDD;
+	background-image: linear-gradient(#FFF, #CCC);
+	background-image: -o-linear-gradient(#FFF, #CCC);
+	background-image: -ms-linear-gradient(#FFF, #CCC);
+	background-image: -moz-linear-gradient(#FFF, #CCC);
+	background-image: -webkit-linear-gradient(#FFF, #CCC);
+	text-shadow: 0 1px 0 #FFF;
+	padding: 7px 14px;
+	padding: 0.5rem 1rem;
+	color: #555;
+}
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="cancel"]:hover {
+	color: #000;
+	cursor: pointer;
+}
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="cancel"]:active {
+	box-shadow: inset 0 0 4px #AAA;
+}
+
+/* Articles */
+article {
+	padding-bottom: 14px;
+	padding-bottom: 1rem;
+	margin-bottom: 14px;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid #CCC;
+}
+article footer {
+	clear: both;
+	padding: 7px 0;
+	padding: 0.5rem 0;
+}
+
+/* Fluid width up to 1000px */
+#header-container,
+#footer-container,
+#content {
+	padding: 14px 3%;
+	padding: 1rem 3%;
+	overflow: hidden;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+/* Make sure images don't expand off pages */
+img, .wp-caption {
+	max-width: 100%;
+	height: auto;
+	border-radius: 3px;
+	border: 0px;
+}
+
+/* Header */
+#skip-link-container {
+	width: 100%;
+}
+#skip-link {
+	background: #333;
+	color: white;
+	border: none;
+	text-align: center;
+	font-size: 16px;
+	padding: 5px;
+}
+#skip-link:hover {
+	color: #59D;
+}
+.invisible {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+}
+.invisible.focusable:active,
+.invisible.focusable:focus {
+	position: static;
+	clip: auto;
+	height: inherit !important;
+	width: inherit !important;
+	overflow: inherit !important;
+}
+.header-search {
+	padding-top: 28px;
+	padding-top: 2rem;
+	float: right;
+}
+#home-link {
+	border: none;
+}
+#home-link img {
+	float: left;
+}
+.site-name {
+	color: #333;
+	margin: 0;
+	font-size: 28px;
+	font-size: 2rem;
+	font-weight: normal;
+	display: block;
+	text-shadow: 1px 1px 0 #CCC;
+}
+.site-description {
+	color: #777;
+	margin: 0 0 14px;
+	margin: 0 0 1rem;
+	font-size: 16px;
+	font-size: 1.14rem;
+	font-style: italic;
+	font-weight: normal;
+	text-shadow: 1px 1px 0 #CCC;
+}
+
+/* Menu */
+.menu {
+	overflow: hidden;
+	clear: both;
+	list-style-type: none;
+	margin: 0;
+	margin-bottom: 7px;
+	padding: 0;
+	border-bottom: 1px solid #CCC;
+}
+.menu li {
+	float: left;
+	padding: 10px 0;
+	margin-bottom: 0;
+}
+.menu li a {
+	padding: 7px 14px;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	color: #777;
+	border-bottom: 4px solid #FFF;
+}
+.menu .current-menu-item a,
+.menu .current-menu-parent a,
+.menu li a:hover {
+	border-bottom: 4px solid #D23;
+	color: #D23;
+}
+/* Breadcrumb */
+.breadcrumbs {
+	font-size: 12px;
+	font-size: 0.86rem;
+}
+
+/* Sidebar */
+#sidebar {
+	float: right;
+	width: 25%;
+	padding-left: 21px;
+	padding-left: 1.5rem;
+	border-left: 1px solid #CCC;
+}
+.widget-title {
+	clear: both;
+	margin-top: 14px;
+	margin-top: 1rem;
+}
+.widget {
+	padding-bottom: 14px;
+	padding-bottom: 1rem;
+	border-bottom: 3px double #CCC;
+}
+/* Squish main content */
+#main {
+	float: left;
+	width: 70%;
+}
+
+/* Home page */
+.home #main,
+.home #sidebar {
+	width: 100%;
+	border: none;
+}
+.home .widget {
+	float: left;
+	width: 47%;
+	margin: 0 3% 0 0;
+}
+
+/* Make room for footer at bottom */
+#content {
+  margin: 0 auto;
+  padding: 0 3% 154px;
+  padding: 0 3% 11rem;
+}
+
+/* Make footer stick to bottom */
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  position: relative;
+}
+
+/* Pre-Header, Footer */
+#footer-container {
+	padding: 14px 3% 0;
+	padding: 1rem 3% 0;
+}
+#page-footer {
+	background: #292929;
+	color: #FFF;
+  width: 100%;
+  min-width: 100%;
+	font-size: 12px;
+	font-size: 0.86rem;
+	position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 133px;
+  height: 9.5rem;
+  padding: 0;
+  line-height: 1.5;
+}
+#footer-container a {
+	color: #FFF;
+	border-bottom: 1px solid #777;
+}
+#footer-container a:hover {
+	color: #59D;
+	border-bottom: 1px solid #59D;
+}
+
+/* Media queries */
+@media print {
+	#page-header,
+	#page-footer,
+	#sidebar {
+		display: none;
+	}
+	#main {
+		width: 100%;
+	}
+	#content,
+	#main article {
+		padding: 0;
+		margin: 0;
+		border: 0;
+	}
+	.post-title {
+		text-shadow: none;
+	}
+}
+@media screen and (max-width: 816px) {
+	.header-search,
+	#main,
+	#sidebar,
+	.home .widget {
+		float: none;
+		padding: 0;
+		width: 100%;
+		border: none;
+	}
+	#links,
+	#government-affairs {
+		display: none;
+	}
+	#main-office {
+		border: none;
+		padding: 0;
+	}
+}
+@media screen and (max-width: 500px) {
+	#home-link img {
+		float: none;
+		margin: 0 auto;
+		display: block;
+	}
+	#home-link {
+		text-align: center;
+	}
+	.site-description {
+		display: block;
+	}
+	.search-label {
+		display: block;
+	}
+	.header-search {
+		width: 280px;
+		width: 20rem;
+		margin: 0 auto;
+	}
+}
