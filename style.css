@@ -83,19 +83,19 @@ blockquote {
 
 /* Links */
 a {
-	color: #89F;
+	color: #89C;
 	text-decoration: none;
-	border-bottom: 1px solid #777;
+	border-bottom: 1px solid #666;
 	-webkit-transition: all 0.2s;
 	-moz-transition: all 0.2s;
 	transition: all 0.2s;
 }
 a:visited {
-	color: #C8F;
+	color: #A7A;
 }
 a:hover {
-	color: #F55;
-	border-bottom: 1px solid #F55;
+	color: #B66;
+	border-bottom: 1px solid #B66;
 }
 
 /* Headings */
@@ -103,6 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 0;
 	font-weight: normal;
 	font-family: Lobster, serif;
+	text-shadow: 0 1px 0 #000;
 } 
 h1 { font-size: 200% }
 h2 { font-size: 180% }
@@ -241,8 +242,8 @@ img, .wp-caption {
 	margin: 0 0 1rem;
 	font-size: 16px;
 	font-size: 1.14rem;
-	font-style: italic;
 	font-weight: normal;
+	font-family: sans-serif;
 }
 
 /* Menu */

@@ -11,7 +11,8 @@ if ( ! isset( $content_width ) )
  */
 function themage_setup() {
 	$background_args = array(
-		'default-color' => 'ffffff',
+		'default-color' => '666666',
+		'default-image' => get_template_directory_uri() . '/background.svg',
 	);
   add_editor_style();
   add_theme_support( 'automatic-feed-links' );
