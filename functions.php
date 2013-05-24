@@ -10,17 +10,12 @@ if ( ! isset( $content_width ) )
  * Make Theme Check happy
  */
 function dredf_mobile_setup() {
-	$header_args = array(
-		'default-image' => get_template_directory_uri() . '/logo.png',
-		'width' => 200,
-		'height' => 100,
-	);
 	$background_args = array(
 		'default-color' => 'ffffff',
 	);
   add_editor_style();
   add_theme_support( 'automatic-feed-links' );
-	add_theme_support( 'custom-header', $header_args );
+	add_theme_support( 'custom-header' );
   add_theme_support( 'custom-background', $background_args );
   add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'menus' );
