@@ -230,11 +230,12 @@ img, .wp-caption {
 .site-name {
 	color: #CCC;
 	margin: 0;
-	font-size: 28px;
-	font-size: 2rem;
+	font-size: 35px;
+	font-size: 2.5rem;
 	font-weight: normal;
 	display: block;
 	font-family: Lobster, serif;
+	text-shadow: 0 1px 0 black;
 }
 .site-description {
 	color: #999;
@@ -244,6 +245,7 @@ img, .wp-caption {
 	font-size: 1.14rem;
 	font-weight: normal;
 	font-family: sans-serif;
+	text-shadow: 0 1px 0 black;
 }
 
 /* Menu */
