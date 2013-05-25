@@ -4,10 +4,11 @@
 	<?php get_sidebar( 'left' ); ?>
 
 	<main id="page-main" role="main">
-		<?php if ( is_search() ): ?>
-			<h1>Search Results For &lsquo;<?php the_search_query() ?>&rsquo;:</h1>
-		<?php elseif ( is_home() ): ?>
-			<h1>News</h1>
+		<?php if ( isset( $wp_query->query['s'] ) ): ?>
+			<h1>Search Results For &lsquo;<?php the_search_query(); ?>&rsquo;:</h1>
+			<?php if ( empty( $s ) ) $wp_query->post_count = 0 ?>
+		<?php elseif ( is_home() && get_option( 'page_for_posts' )  ): ?>
+			<h1><?php echo get_the_title( get_option( 'page_for_posts' ) ); ?></h1>
 		<?php endif; ?>
 		
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
