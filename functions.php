@@ -42,7 +42,7 @@ function themage_widgets_init() {
 		'id' => 'right-sidebar',
 		'description' => 'Appears on the right side of posts and pages',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widet' => '</aside>',
+		'after_widget' => '</aside>',
 	) );
 
 	register_sidebar( array(
@@ -50,7 +50,7 @@ function themage_widgets_init() {
 		'id' => 'header-region',
 		'description' => 'Appears in the header',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widet' => '</aside>',
+		'after_widget' => '</aside>',
 	) );
 
 	register_sidebar( array(
@@ -58,7 +58,7 @@ function themage_widgets_init() {
 		'id' => 'footer-region',
 		'description' => 'Appears in the footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widet' => '</aside>',
+		'after_widget' => '</aside>',
 	) );
 }
 add_action( 'widgets_init', 'themage_widgets_init' );
