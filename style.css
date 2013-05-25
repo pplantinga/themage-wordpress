@@ -251,28 +251,29 @@ img, .wp-caption {
 	overflow: hidden;
 	clear: both;
 	list-style-type: none;
-	margin: 0;
-	margin-bottom: 7px;
+	margin: 14px 0;
 	padding: 0;
-	border-bottom: 1px solid #CCC;
+	border-bottom: 1px solid #666;
 }
 .menu li {
 	float: left;
-	padding: 10px 0;
+	padding: 8px 0;
 	margin-bottom: 0;
 }
 .menu li a {
+	margin: 0;
 	padding: 7px 14px;
 	padding: 0.5rem 1rem;
 	text-decoration: none;
-	color: #777;
-	border-bottom: 4px solid #FFF;
+	color: #CCC;
+	border-bottom: 4px solid #000;
+	border-bottom: 4px solid rgba( 0, 0, 0, 0 );
 }
 .menu .current-menu-item a,
 .menu .current-menu-parent a,
 .menu li a:hover {
-	border-bottom: 4px solid #D23;
-	color: #D23;
+	color: #89C;
+	border-bottom: 4px solid #89C;
 }
 
 /* Content */
@@ -295,7 +296,9 @@ img, .wp-caption {
 	float: right;
 }
 .footer-region {
-	border-top: 1px solid #777;
+	padding-top: 7px;
+	padding-top: 0.5rem;
+	border-top: 1px solid #666;
 }
 .sidebar {
 	width: 30%;
@@ -318,5 +321,3 @@ img, .wp-caption {
 	float: left;
 	width: 70%;
 }
-
-/* Footer */
