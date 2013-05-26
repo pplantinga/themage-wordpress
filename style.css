@@ -194,9 +194,6 @@ img, .wp-caption {
 }
 
 /* Header */
-#skip-link-container {
-	width: 100%;
-}
 #skip-link {
 	background: #333;
 	color: white;
@@ -204,6 +201,8 @@ img, .wp-caption {
 	text-align: center;
 	font-size: 16px;
 	padding: 5px;
+	top: 0;
+	width: 100%;
 }
 #skip-link:hover {
 	color: #59D;
@@ -211,7 +210,6 @@ img, .wp-caption {
 .invisible {
 	position: absolute !important;
 	height: 1px;
-	width: 1px;
 	overflow: hidden;
 	clip: rect(1px 1px 1px 1px);
 }
@@ -220,7 +218,6 @@ img, .wp-caption {
 	position: static;
 	clip: auto;
 	height: inherit !important;
-	width: inherit !important;
 	overflow: inherit !important;
 }
 #home-link {

@@ -10,12 +10,10 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
+		<a id="skip-link" href="#content" class="invisible focusable">Skip to Content</a>
+
 		<div id="page">
 			<header id="page-header">
-				<div id="skip-link-container">
-					<a id="skip-link" href="#content" class="invisible focusable aligncenter">Skip to Content</a>
-				</div>
-
 				<div id="header-container">
 					<a id="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 						<?php $header_image = get_header_image();
