@@ -1,17 +1,23 @@
 === Themage ===
 Contributors: pwp2 
 Donate link: http://massey-plantinga.com/
-Tags: flexible-width, dark
+Tags: flexible-width, three-columns, two-columns, one-column, blue, dark, custom-header
 Requires at least: 3.0.1
 Tested up to: 3.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This theme is a lightweight, responsive, accessible, html5 theme.
+This theme is a lightweight, responsive, accessible, extendable, future-friendly theme.
 
 == Description ==
 
-Dark and eerie looking, good for any site, and easy to extend with a child theme.
+Themage aims to be a stylish, fun theme while maintaining all the good parts of blander themes.
+
+* There is not much code, for easier extensibility and faster load times.
+* The theme looks good on screens of any size.
+* The markup is modern, using html5 and css3 for accessibility, and future-friendlyness.
+* The theme aims to be completely accessible, even making up for some of WordPress' shortcomings.
+* There are four regions you can place widgets: left sidebar, right sidebar, header, and footer.
 
 == Installation ==
 
