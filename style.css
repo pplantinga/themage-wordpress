@@ -177,8 +177,8 @@ article footer {
 
 /* Fluid width */
 #page {
-	padding: 5%;
-	margin: 5%;
+	padding: 4%;
+	margin: 4%;
 	background: #000;
 	background: rgba( 0, 0, 0, 0.7 );
 	box-shadow: 0 0 7px #000;
@@ -327,4 +327,11 @@ img, .wp-caption {
 /* "Search for:" on it's own line */
 .screen-reader-text {
 	display: block;
+}
+
+@media screen and (max-width: 800px) {
+	#page-main,
+	.sidebar {
+		width: 100% !important;
+	}
 }
