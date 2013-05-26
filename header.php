@@ -17,8 +17,6 @@
 				</div>
 
 				<div id="header-container">
-					<?php get_sidebar( 'header-region' ); ?>
-
 					<a id="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 						<?php $header_image = get_header_image();
 							if ( ! empty( $header_image ) ) : ?>
@@ -33,6 +31,8 @@
 							<span class="site-description"><?php bloginfo( 'description' ); ?></span>
 						<?php endif; ?>
 					</a>
+
+					<?php get_sidebar( 'header-region' ); ?>
 
 					<nav>
 						<?php wp_nav_menu( array( 'theme-location' => 'primary' ) ); ?>

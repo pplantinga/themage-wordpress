@@ -49,6 +49,8 @@ body {
 	color: #CCC;
 	line-height: 1.5;
 	background: #777;
+	margin: 0;
+	padding: 0;
 }
 
 /* Treat html5 stuffs correctly */
@@ -157,7 +159,7 @@ input[type="cancel"]:hover {
 input[type="button"]:active,
 input[type="submit"]:active,
 input[type="cancel"]:active {
-	box-shadow: inset 0 0 4px #AAA;
+	box-shadow: inset 0 0 8px #777;
 }
 
 /* Articles */
@@ -223,6 +225,7 @@ img, .wp-caption {
 }
 #home-link {
 	border: none;
+	float: left;
 }
 #home-link img {
 	float: left;
@@ -284,17 +287,11 @@ img, .wp-caption {
 }
 
 /* Sidebars */
-.widgettitle {
-	clear: both;
-	margin-top: 14px;
-	margin-top: 1rem;
-}
 .widget {
 	padding-bottom: 14px;
 	padding-bottom: 1rem;
 }
 .header-region {
-	width: 30%;
 	float: right;
 }
 .footer-region {
@@ -303,13 +300,14 @@ img, .wp-caption {
 	border-top: 1px solid #666;
 }
 .sidebar {
-	width: 30%;
+	width: 25%;
 }
 .two-sidebars .sidebar {
 	width: 20%;
 }
 .sidebar.left {
 	float: left;
+	margin-right: 3%;
 }
 .sidebar.right {
 	float: right;
@@ -317,9 +315,16 @@ img, .wp-caption {
 /* Squish main content */
 .two-sidebars #page-main {
 	float: left;
-	width: 60%;
+	width: 53%;
+	margin-right: 3%;
 }
 .one-sidebar #page-main {
 	float: left;
-	width: 70%;
+	width: 68%;
+	margin-right: 3%;
+}
+
+/* "Search for:" on it's own line */
+.screen-reader-text {
+	display: block;
 }
