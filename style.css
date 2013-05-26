@@ -274,8 +274,8 @@ img, .wp-caption {
 	border-bottom: 4px solid #000;
 	border-bottom: 4px solid rgba( 0, 0, 0, 0 );
 }
-.menu .current-menu-item a,
-.menu .current-menu-parent a,
+.menu .current-menu-item > a,
+.menu .current-menu-parent > a,
 .menu li a:hover {
 	color: #89C;
 	border-bottom: 4px solid #89C;
