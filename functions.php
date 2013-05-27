@@ -184,3 +184,18 @@ function themage_conditional_menu( $menu ) {
 }
 add_filter( 'wp_nav_menu', 'themage_conditional_menu' );
 
+/**
+ * Navigation below lists
+ *
+ * <- Older posts ... Newer posts ->
+ */
+function themage_content_nav() {
+	global $wp_query;
+
+	if ( $wp_query->max_num_pages > 1 ) : ?>
+		<nav id="nav-below" class="navigation" role="navigation">
+			<div class="alignleft"><?php next_posts_link( __( '&larr; Older posts', 'themage' ) ); ?></div>
+			<div class="alignright"><?php previous_posts_link( __( 'Newer posts &rarr;', 'themage' ) ); ?></div>
+		</nav>
+	<?php endif;
+}
