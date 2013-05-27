@@ -223,29 +223,29 @@ img, .wp-caption {
 #home-link {
 	border: none;
 	float: left;
+	margin-bottom: 14px;
 }
 #home-link img {
 	float: left;
 }
-.site-name {
-	color: #CCC;
+.site-name,
+.site-description {
 	margin: 0;
-	font-size: 35px;
-	font-size: 2.5rem;
 	font-weight: normal;
 	display: block;
-	font-family: Lobster, serif;
 	text-shadow: 0 1px 0 black;
+}
+.site-name {
+	color: #CCC;
+	font-size: 35px;
+	font-size: 2.5rem;
+	font-family: Lobster, serif;
 }
 .site-description {
 	color: #999;
-	margin: 0 0 14px;
-	margin: 0 0 1rem;
 	font-size: 16px;
 	font-size: 1.14rem;
-	font-weight: normal;
 	font-family: sans-serif;
-	text-shadow: 0 1px 0 black;
 }
 
 /* Menu */
