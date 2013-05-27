@@ -122,9 +122,9 @@ add_filter( 'body_class', 'themage_body_class' );
  * This function copied from the "two level conditional menu" plugin
  * that I authored. Here is version 1.1
  *
- * To override, remove_filter( 'two_level_nav_menu' );
+ * To override, remove_filter( 'wp_nav_menu', 'themage_conditional_menu' );
  */
-function two_level_nav_menu( $menu ) {
+function themage_conditional_menu( $menu ) {
 	$end_div = substr( $menu, -6 ) == '</div>';
 
 	// Remove the second-level menus
@@ -182,5 +182,5 @@ function two_level_nav_menu( $menu ) {
 
 	return $output;
 }
-add_filter( 'wp_nav_menu', 'two_level_nav_menu' );
+add_filter( 'wp_nav_menu', 'themage_conditional_menu' );
 
