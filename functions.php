@@ -10,13 +10,19 @@ if ( ! isset( $content_width ) )
  * Make Theme Check happy
  */
 function themage_setup() {
+	$header_args = array(
+		'default-text-color' => 'cccccc',
+		'flexible-width' => TRUE,
+		'flexible-height' => TRUE,
+		'wp-head-callback' => 'themage_header',
+	);
 	$background_args = array(
-		'default-color' => '666666',
+		'default-color' => '42698f',
 		'default-image' => get_template_directory_uri() . '/background.svg',
 	);
   add_editor_style();
   add_theme_support( 'automatic-feed-links' );
-	add_theme_support( 'custom-header' );
+	add_theme_support( 'custom-header', $header_args );
   add_theme_support( 'custom-background', $background_args );
   add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'menus' );
@@ -24,6 +30,23 @@ function themage_setup() {
 }
 add_action( 'after_setup_theme', 'themage_setup' );
 
+function themage_header() {
+	$text_color = get_header_textcolor();
+	?>
+	<style type="text/css">
+	<?php if ( ! display_header_text() ) : ?>
+		.site-name,
+		.site-description {
+			display: none;
+		}
+	<?php else:	?>
+		.site-name {
+			color: #<?php echo $text_color; ?>;
+		}
+	<?php endif; ?>
+	</style>
+	<?php
+}
 
 /**
  * Registers our main widget area and the front page widget areas.
