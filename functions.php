@@ -39,7 +39,7 @@ function themage_header() {
 		.site-description {
 			display: none;
 		}
-	<?php else:	?>
+	<?php elseif ( $text_color ):	?>
 		.site-name {
 			color: #<?php echo $text_color; ?>;
 		}
