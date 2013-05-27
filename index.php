@@ -5,8 +5,8 @@
 
 	<main id="page-main" role="main">
 		<?php if ( isset( $wp_query->query['s'] ) ): ?>
-			<h1>Search Results For &lsquo;<?php the_search_query(); ?>&rsquo;:</h1>
-			<?php if ( empty( $s ) ) $wp_query->post_count = 0 ?>
+			<h1><?php printf( __( 'Search Results For &lsquo;%s&rsquo;:', 'themage' ), the_search_query() ); ?></h1>
+			<?php if ( empty( $s ) ) $wp_query->post_count = 0; ?>
 		<?php elseif ( is_home() && get_option( 'page_for_posts' )  ): ?>
 			<h1><?php echo get_the_title( get_option( 'page_for_posts' ) ); ?></h1>
 		<?php endif; ?>
@@ -29,19 +29,23 @@
 				</section>
 				<footer>
 					<?php if ( get_post_type() == 'post' ): ?>
-						<p><?php the_author(); ?> posted this in <?php the_category(', '); the_tags(' and tagged it '); ?>.</p>
+						<p><?php printf( __( '%1$s posted this in %2$s%3$s.', 'themage' ),
+							get_the_author(),
+							get_the_category_list(', '),
+							get_the_tags( __( ' and tagged it ', 'themage' ) ) ); ?>
+						</p>
 						<?php comments_template(); ?>
 					<?php endif; ?>
 				</footer>
 			</article>
 		<?php endwhile; else: ?>
-			<p>Sorry, no posts matched your criteria.</p>
+			<p><?php _e( 'Sorry, no posts matched your criteria.', 'themage' ); ?></p>
 		<?php endif; ?>
 
 		<?php if ( $wp_query->max_num_pages > 1 ) : ?>
 			<nav id="nav-below" class="navigation" role="navigation">
-				<div class="alignleft"><?php next_posts_link( '&larr; Older posts' ); ?></div>
-				<div class="alignright"><?php previous_posts_link( 'Newer posts &rarr;' ); ?></div>
+				<div class="alignleft"><?php next_posts_link( __( '&larr; Older posts', 'themage' ) ); ?></div>
+				<div class="alignright"><?php previous_posts_link( __( 'Newer posts &rarr;', 'themage' ) ); ?></div>
 			</nav>
 		<?php endif; ?>
 	</main>

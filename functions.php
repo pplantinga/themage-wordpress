@@ -55,7 +55,7 @@ function themage_widgets_init() {
   register_sidebar( array(
     'name' => 'Left Sidebar',
     'id' => 'left-sidebar',
-    'description' => 'Appears on the left side of posts and pages',
+    'description' => __( 'Appears on the left side of posts and pages', 'themage' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => '</aside>',
 	) );
@@ -63,7 +63,7 @@ function themage_widgets_init() {
 	register_sidebar( array(
 		'name' => 'Right Sidebar',
 		'id' => 'right-sidebar',
-		'description' => 'Appears on the right side of posts and pages',
+		'description' => __( 'Appears on the right side of posts and pages', 'themage' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 	) );
@@ -71,7 +71,7 @@ function themage_widgets_init() {
 	register_sidebar( array(
 		'name' => 'Header Region',
 		'id' => 'header-region',
-		'description' => 'Appears in the header',
+		'description' => __( 'Appears in the header', 'themage' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 	) );
@@ -79,7 +79,7 @@ function themage_widgets_init() {
 	register_sidebar( array(
 		'name' => 'Footer Region',
 		'id' => 'footer-region',
-		'description' => 'Appears in the footer',
+		'description' => __( 'Appears in the footer', 'themage' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 	) );

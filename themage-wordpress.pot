@@ -1,0 +1,97 @@
+# Copyright (C) 2013 Peter Massey-Plantinga
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Themage 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/themage-wordpress\n"
+"POT-Creation-Date: 2013-05-27 04:13:24+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:7
+msgid "Page Not Found"
+msgstr ""
+
+#: 404.php:10
+msgid "We couldn&rsquo;t find that page. Perhaps searching can help."
+msgstr ""
+
+#: comments.php:3
+msgid "Comments on %s"
+msgstr ""
+
+#: comments.php:8
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:9
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: functions.php:58
+msgid "Appears on the left side of posts and pages"
+msgstr ""
+
+#: functions.php:66
+msgid "Appears on the right side of posts and pages"
+msgstr ""
+
+#: functions.php:74
+msgid "Appears in the header"
+msgstr ""
+
+#: functions.php:82
+msgid "Appears in the footer"
+msgstr ""
+
+#: header.php:13
+msgid "Skip to Content"
+msgstr ""
+
+#: index.php:8
+msgid "Search Results For &lsquo;%s&rsquo;:"
+msgstr ""
+
+#: index.php:32
+msgid "%1$s posted this in %2$s%3$s."
+msgstr ""
+
+#: index.php:35
+msgid " and tagged it "
+msgstr ""
+
+#: index.php:42
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: index.php:47
+msgid "&larr; Older posts"
+msgstr ""
+
+#: index.php:48
+msgid "Newer posts &rarr;"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Themage"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://github.com/pplantinga/themage-wordpress.git"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A simple, lightweight, responsive, accessible, future-friendly theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Peter Massey-Plantinga"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://massey-plantinga.com"
+msgstr ""

@@ -1,16 +1,17 @@
 <?php get_header(); ?>
 	<div id="content">
-		<section id="main">
+	<?php get_sidebar( 'left' ); ?>
+		<main id="page-main">
 			<article id="post-0">
 				<header>
-					<h1 class="post-title">This is somewhat embarrassing, isn&rsquo;t it?</h1>
+					<h1 class="post-title"><?php _e( 'Page Not Found', 'themage' ); ?></h1>
 				</header>
 				<section>
-					<p>It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.</p>
+					<p><?php _e( 'We couldn&rsquo;t find that page. Perhaps searching can help.', 'themage' ); ?></p>
 					<?php get_search_form(); ?>
 				</section>
 			</article>
-		</section>
-	<?php get_sidebar(); ?>
+		</main>
+	<?php get_sidebar( 'right' ); ?>
 	</div>
 <?php get_footer(); ?>

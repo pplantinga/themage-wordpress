@@ -10,7 +10,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<a id="skip-link" href="#content" class="invisible focusable">Skip to Content</a>
+		<a id="skip-link" href="#content" class="invisible focusable"><?php _e( 'Skip to Content', 'themage' ); ?></a>
 
 		<div id="page">
 			<header id="page-header">
