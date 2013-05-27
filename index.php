@@ -32,7 +32,7 @@
 						<p><?php printf( __( '%1$s posted this in %2$s%3$s.', 'themage' ),
 							get_the_author(),
 							get_the_category_list(', '),
-							get_the_tags( __( ' and tagged it ', 'themage' ) ) ); ?>
+							get_the_tag_list( __( ' and tagged it ', 'themage' ), ', ' ) ); ?>
 						</p>
 						<?php comments_template(); ?>
 					<?php endif; ?>
