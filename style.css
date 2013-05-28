@@ -171,6 +171,7 @@ input[type="cancel"]:active {
 /* Tables */
 table {
 	background: #CCC;
+	margin-bottom: 14px;
 }
 th, td {
 	padding: 7px 14px;
