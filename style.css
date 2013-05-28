@@ -60,8 +60,8 @@ article, aside, section, footer, main {
 
 /* Indented stuffs */
 ul, dl, ol {
-	padding-left: 14px;
-	padding-left: 1rem;
+	padding-left: 21px;
+	padding-left: 1.5rem;
 }
 li, dt, dd {
 	margin-bottom: 7px;
@@ -81,6 +81,10 @@ blockquote {
 	padding-left: 1rem;
 	border-left: 4px solid #8C8;
 	font-style: italic;
+}
+blockquote cite,
+blockquote em {
+	font-weight: bold;
 }
 
 /* Links */
