@@ -1,6 +1,6 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header>
-					<?php if ( is_single() ): ?>
+					<?php if ( is_singular() ): ?>
 						<h1 class="post-title"><?php the_title(); ?></h1>
 					<?php elseif ( is_front_page() ): ?>
 						<h2 class="post-title"><?php the_title(); ?></h2>
@@ -10,7 +10,7 @@
 				</header>
 				<section>
 					<?php if ( has_post_thumbnail() ) the_post_thumbnail(); ?>
-					<?php if ( is_single() ) the_content(); else the_excerpt(); ?>
+					<?php if ( is_singular() ) the_content(); else the_excerpt(); ?>
 					<?php wp_link_pages(); ?>
 				</section>
 				<footer>
