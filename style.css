@@ -141,7 +141,8 @@ textarea {
 }
 input[type="button"],
 input[type="submit"],
-input[type="cancel"] {
+input[type="cancel"],
+kbd {
 	font-weight: bold;
 	background: #DDD;
 	background-image: linear-gradient(#FFF, #CCC);
@@ -153,6 +154,7 @@ input[type="cancel"] {
 	padding: 7px 14px;
 	padding: 0.5rem 1rem;
 	color: #555;
+	border-radius: 3px;
 }
 input[type="button"]:hover,
 input[type="submit"]:hover,
