@@ -33,7 +33,7 @@
 					<?php get_sidebar( 'header-region' ); ?>
 
 					<nav>
-						<?php wp_nav_menu( array( 'theme-location' => 'primary' ) ); ?>
+						<?php wp_nav_menu( array( 'theme-location' => 'primary', 'depth' => 2 ) ); ?>
 					</nav>
 				</div>
 			</header>
