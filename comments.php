@@ -1,6 +1,6 @@
 <section id="comments">
 	<?php if ( have_comments() ): ?>
-		<h2><?php _e( 'Comments on %s', 'themage', get_the_title() ); ?></h2>
+		<h2><?php _e( 'Comments', 'themage' ); ?></h2>
 		<ul><?php wp_list_comments(); ?></ul>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ): ?>
