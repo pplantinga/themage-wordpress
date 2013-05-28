@@ -1,6 +1,6 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header>
-					<?php if ( is_singular() ): ?>
+					<?php if ( is_singular() && !is_front_page() ): ?>
 						<h1 class="post-title"><?php the_title(); ?></h1>
 					<?php elseif ( is_front_page() ): ?>
 						<h2 class="post-title"><?php the_title(); ?></h2>
