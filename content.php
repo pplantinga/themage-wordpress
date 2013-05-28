@@ -1,16 +1,16 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header>
-					<?php if ( is_search() || is_home() || is_archive() ): ?>
-						<h2 class="post-title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
+					<?php if ( is_single() ): ?>
+						<h1 class="post-title"><?php the_title(); ?></h1>
 					<?php elseif ( is_front_page() ): ?>
 						<h2 class="post-title"><?php the_title(); ?></h2>
 					<?php else: ?>
-						<h1 class="post-title"><?php the_title(); ?></h1>
+						<h2 class="post-title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
 					<?php endif; ?>
 				</header>
 				<section>
 					<?php if ( has_post_thumbnail() ) the_post_thumbnail(); ?>
-					<?php if ( is_search() ) the_excerpt(); else the_content(); ?>
+					<?php if ( is_single() ) the_content(); else the_excerpt(); ?>
 					<?php wp_link_pages(); ?>
 				</section>
 				<footer>
