@@ -168,6 +168,20 @@ input[type="cancel"]:active {
 	box-shadow: inset 0 0 8px #777;
 }
 
+/* Tables */
+table {
+	background: #CCC;
+}
+th, td {
+	padding: 7px 14px;
+}
+th {
+	background: #333;
+}
+td {
+	background: #000;
+}
+
 /* Code */
 pre,
 code,
