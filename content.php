@@ -16,7 +16,7 @@
 				<footer>
 					<?php if ( get_post_type() == 'post' ): ?>
 						<p><?php printf( __( '%1$s posted this in %2$s%3$s.', 'themage' ),
-							get_the_author(),
+							"<a href='" . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . "'>" . get_the_author() . '</a>',
 							get_the_category_list(', '),
 							get_the_tag_list( __( ' and tagged it ', 'themage' ), ', ' ) ); ?>
 						</p>
