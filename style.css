@@ -179,6 +179,11 @@ kbd {
 	font-weight: normal;
 }
 
+/* Labels on their own lines */
+label {
+	display: block;
+}
+
 /* Tables */
 table {
 	margin-bottom: 14px;
@@ -367,11 +372,6 @@ img, .wp-caption {
 	float: left;
 	width: 68%;
 	margin-right: 3%;
-}
-
-/* "Search for:" on it's own line */
-.screen-reader-text {
-	display: block;
 }
 
 @media screen and (max-width: 800px) {

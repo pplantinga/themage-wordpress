@@ -25,8 +25,7 @@ function themage_setup() {
 	add_theme_support( 'custom-header', $header_args );
   add_theme_support( 'custom-background', $background_args );
   add_theme_support( 'post-thumbnails' );
-	add_theme_support( 'menus' );
-	register_nav_menus( array( 'primary' => 'Primary Menu' ) );
+	register_nav_menu( 'primary', __( 'Primary Menu', 'themage' ) );
 }
 add_action( 'after_setup_theme', 'themage_setup' );
 
