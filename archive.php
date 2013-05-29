@@ -5,20 +5,20 @@
 
 	<main id="page-main" role="main">
 		<h1 class="page-title"><?php if ( is_day() ):
-			printf( __( 'Daily Archive: %s', 'themage' ), get_the_date() );
+			printf( __( 'Posts From %s', 'themage' ), get_the_date() );
 		elseif ( is_month() ):
-			printf( __( 'Monthly Archive: %s', 'themage' ), get_the_date( 'F Y' ) );
+			printf( __( 'Posts From %s', 'themage' ), get_the_date( 'F Y' ) );
 		elseif ( is_year() ):
-			printf( __( 'Yearly Archive: %s', 'themage' ), get_the_date( 'Y' ) );
+			printf( __( 'Posts From %s', 'themage' ), get_the_date( 'Y' ) );
 		elseif ( is_category() ):
-			single_cat_title( __( 'Category Archive: ', 'themage' ) );
+			printf( __( 'Posts in Category &lsquo;%s&rsquo;', 'themage' ), single_cat_title( '', false ) );
 		elseif ( is_tag() ):
-			single_tag_title( __( 'Tag Archive: ', 'themage' ) );
+			printf( __( 'Posts with Tag &lsquo;%s&rsquo;', 'themage' ), single_tag_title( '', false ) );
 		elseif ( is_author() ):
 			$curauth = get_query_var( 'author_name' )
 				? get_user_by( 'slug', get_query_var( 'author_name' ) )
 				: get_userdata( get_query_var( 'author' ) );
-			printf( __( 'Author Archive: %s', 'themage' ), $curauth->nickname );
+			printf( __( 'Posts by &lsquo;%s&rsquo;', 'themage' ), $curauth->nickname );
 		else:
 			_e( 'Archive', 'themage' );
 		endif; ?></h1>
