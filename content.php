@@ -15,13 +15,14 @@
 				</section>
 				<footer>
 					<?php if ( get_post_type() == 'post' ): ?>
-						<p><?php printf( __( '%1$s posted this in %2$s%3$s.', 'themage' ),
-							"<a href='" . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . "'>" . get_the_author() . '</a>',
+						<p><?php printf( __( '%1$s posted this in %2$s%3$s on %4$s.', 'themage' ),
+							themage_author_link(),
 							get_the_category_list(', '),
-							get_the_tag_list( __( ' and tagged it ', 'themage' ), ', ' ) ); ?>
+							get_the_tag_list( __( ' and tagged it ', 'themage' ), ', ' ),
+					 		themage_date_link()	); ?>
 						</p>
-						<?php comments_template(); ?>
 					<?php endif; ?>
+					<?php comments_template(); ?>
 				</footer>
 			</article>
 

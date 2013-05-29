@@ -224,3 +224,20 @@ function themage_content_nav() {
 		</nav>
 	<?php endif;
 }
+
+function themage_author_link() {
+	$url = esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );
+	$link = "<a href='$url'>" . get_the_author() . '</a>';
+
+	return $link;
+}
+
+function themage_date_link() {
+	$date = sprintf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
+		esc_url( get_permalink() ),
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() )
+	);
+	
+	return $date;
+}
