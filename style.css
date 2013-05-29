@@ -136,8 +136,6 @@ input[type="url"],
 textarea {
 	padding: 7px;
 	padding: 0.5rem;
-	width: 203px;
-	width: 14.5rem;
 }
 input[type="button"],
 input[type="submit"],
