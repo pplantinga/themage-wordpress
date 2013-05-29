@@ -10,7 +10,7 @@
 				</header>
 				<section>
 					<?php if ( has_post_thumbnail() ) the_post_thumbnail(); ?>
-					<?php if ( is_singular() ) the_content(); else the_excerpt(); ?>
+					<?php if ( is_search() ) the_excerpt(); else the_content(); ?>
 					<?php wp_link_pages(); ?>
 				</section>
 				<footer>
