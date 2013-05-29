@@ -11,7 +11,13 @@
 				<section>
 					<?php if ( has_post_thumbnail() ) the_post_thumbnail(); ?>
 					<?php if ( is_search() ) the_excerpt(); else the_content(); ?>
-					<?php wp_link_pages(); ?>
+					<?php wp_link_pages( array(
+						'before' => '<nav class="pager" role="navigation">',
+						'after' => '</nav>',
+						'link_before' => '<span class="button">',
+						'link_after' => '</span>',
+						'pagelink' => 'Page %',
+					) ); ?>
 				</section>
 				<footer>
 					<?php if ( get_post_type() == 'post' ): ?>
