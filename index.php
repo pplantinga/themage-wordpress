@@ -5,7 +5,7 @@
 
 	<main id="page-main" role="main">
 		<?php if ( isset( $wp_query->query['s'] ) ): ?>
-			<h1><?php printf( __( 'Search Results For &lsquo;%s&rsquo;:', 'themage' ), the_search_query() ); ?></h1>
+			<h1><?php printf( __( 'Search Results For &lsquo;%s&rsquo;', 'themage' ), get_search_query() ); ?></h1>
 			<?php if ( empty( $s ) ) $wp_query->post_count = 0; ?>
 		<?php elseif ( is_home() && get_option( 'page_for_posts' )  ): ?>
 			<h1><?php echo get_the_title( get_option( 'page_for_posts' ) ); ?></h1>
