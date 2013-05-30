@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: flexible-width, one-column, two-columns, three-columns, left-sidebar, right-sidebar, blue, dark, custom-header, custom-menu
 */
 
-/* Wordpress-required styles */
+/* Wordpress-specific styles */
 .wp-caption-text,
 .gallery-caption {
 	font-style: italic;
@@ -38,7 +38,9 @@ Tags: flexible-width, one-column, two-columns, three-columns, left-sidebar, righ
   margin-left: auto;
   margin-right: auto;
 }
-
+.gallery-item {
+	padding: 0;
+}
 
 /* Global styles */
 html {
