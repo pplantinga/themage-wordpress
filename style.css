@@ -14,7 +14,7 @@ Tags: flexible-width, one-column, two-columns, three-columns, left-sidebar, righ
 .wp-caption-text,
 .gallery-caption {
 	font-style: italic;
-	color: #777;
+	color: #999;
 }
 .sticky {
 	border-top: 4px double #CCC;
