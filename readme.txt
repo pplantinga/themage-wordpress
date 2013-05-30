@@ -1,9 +1,9 @@
 === Themage ===
 Contributors: pwp2 
 Donate link: http://massey-plantinga.com/
-Tags: flexible-width, three-columns, two-columns, one-column, blue, dark, custom-header
+Tags: flexible-width, three-columns, two-columns, one-column, left-sidebar, right-sidebar, blue, dark, custom-header, custom-menu
 Requires at least: 3.0.1
-Tested up to: 3.5.1
+Tested up to: 3.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,3 +23,4 @@ Themage aims to be a stylish, fun theme while maintaining all the good parts of 
 
 1. Upload `themage` to the `/wp-content/themes/` directory
 1. Activate the theme through the 'Theme' menu in WordPress
+1. If you want to keep the default background, you'll need to allow svg's (usually done with .htaccess)

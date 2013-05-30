@@ -10,7 +10,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: flexible-width, one-column, two-columns, three-columns, left-sidebar, right-sidebar, blue, dark, custom-header, custom-menu
 */
 
-/* Wordpress-specific styles */
+/*****************************
+ * Wordpress-specific styles *
+ *****************************/
 .wp-caption-text,
 .gallery-caption {
 	font-style: italic;
@@ -42,7 +44,9 @@ Tags: flexible-width, one-column, two-columns, three-columns, left-sidebar, righ
 	padding: 0;
 }
 
-/* Global styles */
+/*****************
+ * Global styles *
+ *****************/
 html {
 	font-size: 14px;
 	-ms-word-wrap: break-word;
@@ -182,7 +186,6 @@ kbd {
 	font-size: 12px;
 	font-weight: normal;
 }
-
 /* Labels on their own lines */
 label {
 	display: block;
@@ -248,7 +251,9 @@ img, .wp-caption {
 	border: 0px;
 }
 
-/* Header */
+/**********
+ * Header *
+ **********/
 #skip-link {
 	background: #333;
 	color: white;
@@ -303,7 +308,9 @@ img, .wp-caption {
 	font-family: sans-serif;
 }
 
-/* Menu */
+/********
+ * Menu *
+ ********/
 .menu {
 	overflow: hidden;
 	clear: both;
@@ -335,7 +342,9 @@ img, .wp-caption {
 	border-bottom: 4px solid #89C;
 }
 
-/* Content */
+/***********
+ * Content *
+ ***********/
 #content {
 	overflow: hidden;
 	clear: both;
@@ -351,7 +360,9 @@ img, .wp-caption {
 	margin-bottom: 1rem;
 }
 
-/* Sidebars */
+/************
+ * Sidebars *
+ ************/
 .widget {
 	padding-bottom: 14px;
 	padding-bottom: 1rem;
@@ -389,6 +400,9 @@ img, .wp-caption {
 	margin-right: 3%;
 }
 
+/*****************
+ * Small Screens *
+ *****************/
 @media screen and (max-width: 800px) {
 	#page-main,
 	.sidebar {

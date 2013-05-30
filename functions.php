@@ -1,26 +1,28 @@
 <?php
 
 /**
- * Sets up the content width value based on the theme's design and stylesheet.
+ * Sets up the content width value.
  */
 if ( ! isset( $content_width ) ) 
-  $content_width = 1000;
+  $content_width = 600;
 
 /**
- * Make Theme Check happy
+ * Add all our supported elements
  */
 function themage_setup() {
+
 	$header_args = array(
 		'default-text-color' => 'cccccc',
 		'flexible-width' => TRUE,
 		'flexible-height' => TRUE,
 		'wp-head-callback' => 'themage_header',
 	);
+
 	$background_args = array(
 		'default-color' => '42698f',
 		'default-image' => get_template_directory_uri() . '/background.svg',
 	);
-  add_editor_style();
+
   add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'custom-header', $header_args );
   add_theme_support( 'custom-background', $background_args );
@@ -29,7 +31,13 @@ function themage_setup() {
 }
 add_action( 'after_setup_theme', 'themage_setup' );
 
+/**
+ * wp-head-callback for custom-header
+ *
+ * Allows removing/changing color of site title
+ */
 function themage_header() {
+
 	$text_color = get_header_textcolor();
 	?>
 	<style type="text/css">
@@ -48,9 +56,14 @@ function themage_header() {
 }
 
 /**
- * Registers our main widget area and the front page widget areas.
+ * Registers our widget areas:
+ *  * Left Sidebar
+ *  * Right Sidebar
+ *  * Header Region
+ *  * Footer Region
  */
 function themage_widgets_init() {
+
   register_sidebar( array(
     'name' => 'Left Sidebar',
     'id' => 'left-sidebar',
@@ -86,10 +99,10 @@ function themage_widgets_init() {
 add_action( 'widgets_init', 'themage_widgets_init' );
 
 /**
- * Enqueue scripts 
+ * Enqueue: stylesheet, comments, Lobster font
  */
-function themage_enqueue()
-{
+function themage_enqueue() {
+
 	// Load main stylesheet
 	wp_enqueue_style( 'themage-style', get_stylesheet_uri() );
 
@@ -104,8 +117,9 @@ add_action( 'wp_enqueue_scripts', 'themage_enqueue' );
 /**
  * Add body classes
  */
-function themage_body_class( $classes )
-{
+function themage_body_class( $classes ) {
+
+	// Add a class indicating how many sidebars there are
 	if ( is_active_sidebar( 'left-sidebar' ) && is_active_sidebar( 'right-sidebar' ) )
 		$classes[] = 'two-sidebars';
 	else if ( is_active_sidebar( 'left-sidebar' ) || is_active_sidebar( 'right-sidebar' ) )
@@ -214,6 +228,7 @@ add_filter( 'wp_nav_menu', 'themage_conditional_menu', 10, 2 );
  * <- Older posts ... Newer posts ->
  */
 function themage_content_nav() {
+
 	global $wp_query;
 
 	if ( $wp_query->max_num_pages > 1 ) : ?>
@@ -224,14 +239,25 @@ function themage_content_nav() {
 	<?php endif;
 }
 
+/**
+ * Link an author's name to that author's archive page
+ */
 function themage_author_link() {
+
 	$url = esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );
 	$link = "<a href='$url'>" . get_the_author() . '</a>';
 
 	return $link;
 }
 
+/**
+ * Output a date using html5 <time>
+ *  and link to post (cuz post might not have a title)
+ * 
+ * Format: Month Day, Year
+ */
 function themage_date_link() {
+
 	$date = sprintf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
 		esc_url( get_permalink() ),
 		esc_attr( get_the_date( 'c' ) ),
@@ -241,12 +267,13 @@ function themage_date_link() {
 	return $date;
 }
 
-/* Read more stuffs */
-add_filter( 'get_the_excerpt', 'themage_custom_excerpt_more', 100 );
-add_filter( 'excerpt_more', 'themage_excerpt_more', 100 );
-add_filter( 'the_content_more_link', 'themage_content_more', 100 );
-
+/**
+ * Read more links
+ *
+ * Format: Continue reading '<insert title here>'
+ */
 function themage_continue_reading() {
+
 	$url = get_permalink();
 	$text = sprintf( __( 'Continue Reading &lsquo;%s&rsquo;', 'themage' ), get_the_title() );
 	$link = "<a class='read-more' href='$url'>$text</a>";
@@ -257,10 +284,12 @@ function themage_continue_reading() {
 function themage_excerpt_more( $more ) {
 	return '… ' . themage_continue_reading();
 }
+add_filter( 'excerpt_more', 'themage_excerpt_more', 100 );
 
 function themage_content_more( $more ) {
 	return themage_continue_reading();
 }
+add_filter( 'the_content_more_link', 'themage_content_more', 100 );
 
 function themage_custom_excerpt_more( $output ) {	
 	if ( has_excerpt() && !is_attachment() )
@@ -268,3 +297,4 @@ function themage_custom_excerpt_more( $output ) {
 	
 	return $output;
 }
+add_filter( 'get_the_excerpt', 'themage_custom_excerpt_more', 100 );
