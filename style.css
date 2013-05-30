@@ -43,6 +43,8 @@ Tags: flexible-width, one-column, two-columns, three-columns, left-sidebar, righ
 /* Global styles */
 html {
 	font-size: 14px;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 }
 body {
 	font-family: sans-serif;
