@@ -331,6 +331,7 @@ img, .wp-caption {
 /* Content */
 #content {
 	overflow: hidden;
+	clear: both;
 }
 /* Current page should look different */
 .pager > span {
