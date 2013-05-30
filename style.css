@@ -218,6 +218,7 @@ samp {
 	padding: 0.2rem 0.5rem;
 	border: 1px solid #333;
 	border-radius: 3px;
+	word-wrap: normal;
 }
 
 /* Articles */
