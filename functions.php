@@ -240,3 +240,31 @@ function themage_date_link() {
 	
 	return $date;
 }
+
+/* Read more stuffs */
+add_filter( 'get_the_excerpt', 'themage_custom_excerpt_more', 100 );
+add_filter( 'excerpt_more', 'themage_excerpt_more', 100 );
+add_filter( 'the_content_more_link', 'themage_content_more', 100 );
+
+function themage_continue_reading() {
+	$url = get_permalink();
+	$text = sprintf( __( 'Continue Reading &lsquo;%s&rsquo;', 'themage' ), get_the_title() );
+	$link = "<a class='read-more' href='$url'>$text</a>";
+
+	return $link;
+}
+
+function themage_excerpt_more( $more ) {
+	return '… ' . themage_continue_reading();
+}
+
+function themage_content_more( $more ) {
+	return themage_continue_reading();
+}
+
+function themage_custom_excerpt_more( $output ) {	
+	if ( has_excerpt() && !is_attachment() )
+		$output .= ' ' . themage_continue_reading( $id );
+	
+	return $output;
+}
