@@ -345,6 +345,11 @@ img, .wp-caption {
 	background: #999;
 	cursor: default;
 }
+#nav-below {
+	overflow: hidden;
+	margin-bottom: 14px;
+	margin-bottom: 1rem;
+}
 
 /* Sidebars */
 .widget {
