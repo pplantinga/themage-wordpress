@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Themage 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/themage-wordpress\n"
-"POT-Creation-Date: 2013-05-27 04:13:24+00:00\n"
+"POT-Creation-Date: 2013-06-03 01:58:12+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,8 +20,28 @@ msgstr ""
 msgid "We couldn&rsquo;t find that page. Perhaps searching can help."
 msgstr ""
 
+#: archive.php:8 archive.php:10 archive.php:12
+msgid "Posts From %s"
+msgstr ""
+
+#: archive.php:14
+msgid "Posts in Category &lsquo;%s&rsquo;"
+msgstr ""
+
+#: archive.php:16
+msgid "Posts with Tag &lsquo;%s&rsquo;"
+msgstr ""
+
+#: archive.php:21
+msgid "Posts by &lsquo;%s&rsquo;"
+msgstr ""
+
+#: archive.php:23
+msgid "Archive"
+msgstr ""
+
 #: comments.php:3
-msgid "Comments on %s"
+msgid "Comments"
 msgstr ""
 
 #: comments.php:8
@@ -32,20 +52,44 @@ msgstr ""
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: functions.php:58
+#: content.php:24
+msgid "%1$s posted this in %2$s%3$s on %4$s."
+msgstr ""
+
+#: content.php:27
+msgid " and tagged it "
+msgstr ""
+
+#: functions.php:30
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:70
 msgid "Appears on the left side of posts and pages"
 msgstr ""
 
-#: functions.php:66
+#: functions.php:78
 msgid "Appears on the right side of posts and pages"
 msgstr ""
 
-#: functions.php:74
+#: functions.php:86
 msgid "Appears in the header"
 msgstr ""
 
-#: functions.php:82
+#: functions.php:94
 msgid "Appears in the footer"
+msgstr ""
+
+#: functions.php:236
+msgid "&larr; Older posts"
+msgstr ""
+
+#: functions.php:237
+msgid "Newer posts &rarr;"
+msgstr ""
+
+#: functions.php:278
+msgid "Continue Reading &lsquo;%s&rsquo;"
 msgstr ""
 
 #: header.php:13
@@ -53,27 +97,11 @@ msgid "Skip to Content"
 msgstr ""
 
 #: index.php:8
-msgid "Search Results For &lsquo;%s&rsquo;:"
+msgid "Search Results For &lsquo;%s&rsquo;"
 msgstr ""
 
-#: index.php:32
-msgid "%1$s posted this in %2$s%3$s."
-msgstr ""
-
-#: index.php:35
-msgid " and tagged it "
-msgstr ""
-
-#: index.php:42
+#: index.php:17
 msgid "Sorry, no posts matched your criteria."
-msgstr ""
-
-#: index.php:47
-msgid "&larr; Older posts"
-msgstr ""
-
-#: index.php:48
-msgid "Newer posts &rarr;"
 msgstr ""
 
 #. Theme Name of the plugin/theme
