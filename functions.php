@@ -282,7 +282,7 @@ function themage_continue_reading() {
 }
 
 function themage_excerpt_more( $more ) {
-	return '… ' . themage_continue_reading();
+	return '... ' . themage_continue_reading();
 }
 add_filter( 'excerpt_more', 'themage_excerpt_more', 100 );
 
